@@ -75,7 +75,7 @@ int main() {
      .CHECK_OUTPUT(p+q, "1.03[ton]")
      .CHECK_OUTPUT(p+r, "1.00003[ton]")
      .CHECK_OUTPUT(q+p, "1030[kg]")
-     .CHECK_OUTPUT(r+q, "1000030[g]")
+     .CHECK_OUTPUT(r+q, "30030[g]")
      .CHECK_OUTPUT(r-r, "0[g]")
      .CHECK_OUTPUT((r+=q), "30030[g]")
      .CHECK_OUTPUT((q+=p), "1030[kg]")
@@ -88,9 +88,9 @@ int main() {
      // time test - in the 'famely'
 
      .setname("Compatible dimensions - time check: ")
-     .CHECK_OUTPUT(c+d, "2.5[h]")
-     .CHECK_OUTPUT(c+y, "2.001[h]")
-     .CHECK_OUTPUT((c+=c), "4[h]")
+     .CHECK_OUTPUT(c+d, "2.5[hour]")
+     .CHECK_OUTPUT(c+y, "2.00167[hour]")
+     .CHECK_OUTPUT((c+=c), "4[hour]")
      .CHECK_OUTPUT(d+c, "270[min]")
      .CHECK_OUTPUT(d+y, "30.1[min]")
      .CHECK_OUTPUT(y+c, "14406[sec]")
