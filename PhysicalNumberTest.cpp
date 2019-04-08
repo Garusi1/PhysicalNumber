@@ -1,7 +1,7 @@
 /**
  * Examples of automatic tests for the exercise on physical numbers.
  *
- * @author Michael Garusi && Naor Eliav
+ * @author Erel Segal-Halevi
  * @since 2019-02
  */
 
@@ -176,7 +176,7 @@ int main() {
     .CHECK_OUTPUT(--b1, "298[m]")
     .CHECK_OUTPUT(c1++, "100[cm]")
     .CHECK_OUTPUT(c1--, "101[cm]")
-    .CHECK_OUTPUT(++c1, "102[cm]")
+    .CHECK_OUTPUT(++c1, "101[cm]")
     .CHECK_OUTPUT(d1++, "2[hour]")
     .CHECK_OUTPUT(--d1, "1[hour]")
     .CHECK_OUTPUT(d1--, "1[hour]")
