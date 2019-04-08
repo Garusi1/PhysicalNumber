@@ -1,10 +1,9 @@
 /**
  * Examples of automatic tests for the exercise on physical numbers.
  *
- * @author Michael Garusi && Naor Eliav
+ * @author Erel Segal-Halevi
  * @since 2019-02
  */
-
 
 #include <iostream>
 #include <sstream>
@@ -178,9 +177,9 @@ int main() {
     .CHECK_OUTPUT(c1++, "100[cm]")
     .CHECK_OUTPUT(c1--, "101[cm]")
     .CHECK_OUTPUT(++c1, "102[cm]")
-    .CHECK_OUTPUT(d1++, "2[h]")
-    .CHECK_OUTPUT(--d1, "1[h]")
-    .CHECK_OUTPUT(d1--, "1[h]")
+    .CHECK_OUTPUT(d1++, "2[hour]")
+    .CHECK_OUTPUT(--d1, "1[hour]")
+    .CHECK_OUTPUT(d1--, "1[hour]")
     .CHECK_OUTPUT(++e1, "31[min]")
     .CHECK_OUTPUT(--e1, "30[min]")
     .CHECK_OUTPUT(e1--, "30[min]")
@@ -222,4 +221,3 @@ int main() {
     cout <<  "*** Grade: " << grade << " ***" << endl;
     return grade;
 }
-
