@@ -48,7 +48,7 @@ int main() {
     .CHECK_OUTPUT(z, "100[cm]")
     .CHECK_OUTPUT(c, "2[hour]")
     .CHECK_OUTPUT(d, "30[min]")
-    .CHECK_OUTPUT(y, "10[sec]")
+    .CHECK_OUTPUT(y, "6[sec]")
     .CHECK_OUTPUT(p, "1[ton]")
     .CHECK_OUTPUT(q, "30[kg]")
     .CHECK_OUTPUT(r, "30[g]")
@@ -66,7 +66,7 @@ int main() {
     .CHECK_OUTPUT(a-b, "2.3[km]")
     .CHECK_OUTPUT(-b, "0[m]")
     .CHECK_OUTPUT(-a, "-2.3[km]")
-    .CHECK_OUTPUT(+b, "0[km]")
+    .CHECK_OUTPUT(+b, "0[m]")
     .CHECK_OUTPUT(+a, "2.3[km]")
 
     // mass test - in the 'famely'
@@ -93,7 +93,7 @@ int main() {
      .CHECK_OUTPUT((c+=c), "4[h]")
      .CHECK_OUTPUT(d+c, "270[min]")
      .CHECK_OUTPUT(d+y, "30.1[min]")
-     .CHECK_OUTPUT(y+c, "1806[sec]")
+     .CHECK_OUTPUT(y+c, "14406[sec]")
      .CHECK_OUTPUT((d+=y), "30.1[min]")
      .CHECK_OUTPUT(d-d, "0[min]")
      .CHECK_OUTPUT((d-=d), "0[min]")
