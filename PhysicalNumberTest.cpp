@@ -1,7 +1,7 @@
 /**
  * Examples of automatic tests for the exercise on physical numbers.
  *
- * @author Erel Segal-Halevi
+ * @author Michael Garusi && Naor Eliav
  * @since 2019-02
  */
 
