@@ -191,7 +191,7 @@ int main() {
     .CHECK_OUTPUT(g1--, "2[ton]")
     .CHECK_OUTPUT(h1++, "30[kg]")
     .CHECK_OUTPUT(h1--, "31[kg]")
-    .CHECK_OUTPUT(++h1, "30[kg]")
+    .CHECK_OUTPUT(++h1, "31[kg]")
     .CHECK_OUTPUT(--i1, "29[g]")
     .CHECK_OUTPUT(i1++, "29[g]")
     .CHECK_OUTPUT(i1--, "30[g]")
