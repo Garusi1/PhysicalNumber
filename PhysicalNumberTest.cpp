@@ -5,6 +5,7 @@
  * @since 2019-02
  */
 
+
 #include <iostream>
 #include <sstream>
 using std::cout, std::endl, std::istringstream;
@@ -168,24 +169,33 @@ int main() {
     .CHECK_THROWS(flag=p>c)
 
     .setname("plus and minus by 1 all dimensions")
-    .CHECK_OUTPUT(a1++, "3[km]")
-    .CHECK_OUTPUT(a1--, "1[km]")
-    .CHECK_OUTPUT(b1++, "301[m]")
-    .CHECK_OUTPUT(b1--, "299[m]")
-    .CHECK_OUTPUT(c1++, "101[cm]")
-    .CHECK_OUTPUT(c1--, "99[cm]")
-    .CHECK_OUTPUT(d1++, "3[h]")
+    .CHECK_OUTPUT(a1++, "2[km]")
+    .CHECK_OUTPUT(a1, "3[km]")
+    .CHECK_OUTPUT(--a1, "2[km]")
+    .CHECK_OUTPUT(b1--, "300[m]")
+    .CHECK_OUTPUT(b1, "299[m]")
+    .CHECK_OUTPUT(--b1, "298[m]")
+    .CHECK_OUTPUT(c1++, "100[cm]")
+    .CHECK_OUTPUT(c1--, "101[cm]")
+    .CHECK_OUTPUT(++c1, "102[cm]")
+    .CHECK_OUTPUT(d1++, "2[h]")
+    .CHECK_OUTPUT(--d1, "1[h]")
     .CHECK_OUTPUT(d1--, "1[h]")
-    .CHECK_OUTPUT(e1++, "31[min]")
-    .CHECK_OUTPUT(e1--, "29[min]")
-    .CHECK_OUTPUT(f1++, "7[sec]")
-    .CHECK_OUTPUT(f1--, "5[sec]")
-    .CHECK_OUTPUT(g1++, "2[ton]")
-    .CHECK_OUTPUT(g1--, "0[ton]")
-    .CHECK_OUTPUT(h1++, "31[kg]")
-    .CHECK_OUTPUT(h1--, "29[kg]")
-    .CHECK_OUTPUT(i1++, "31[g]")
-    .CHECK_OUTPUT(i1--, "29[g]")
+    .CHECK_OUTPUT(++e1, "31[min]")
+    .CHECK_OUTPUT(--e1, "30[min]")
+    .CHECK_OUTPUT(e1--, "30[min]")
+    .CHECK_OUTPUT(f1++, "6[sec]")
+    .CHECK_OUTPUT(f1, "7[sec]")
+    .CHECK_OUTPUT(++f1, "8[sec]")
+    .CHECK_OUTPUT(g1++, "1[ton]")
+    .CHECK_OUTPUT(g1--, "2[ton]")
+    .CHECK_OUTPUT(h1++, "30[kg]")
+    .CHECK_OUTPUT(h1--, "31[kg]")
+    .CHECK_OUTPUT(++h1, "30[kg]")
+    .CHECK_OUTPUT(--i1, "29[g]")
+    .CHECK_OUTPUT(i1++, "29[g]")
+    .CHECK_OUTPUT(i1--, "30[g]")
+
 
     .setname("\n Basic input")
     .CHECK_OK(istringstream("700[kg]") >> q)
@@ -212,3 +222,4 @@ int main() {
     cout <<  "*** Grade: " << grade << " ***" << endl;
     return grade;
 }
+
