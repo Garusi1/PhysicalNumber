@@ -1,8 +1,8 @@
 /**
  * Examples of automatic tests for the exercise on physical numbers.
  *
- * @author Michael Garusi & Naor Eliav
- * 
+ * @author Michael Garusi && Naor Eliav
+ * @since 2019-02
  */
 
 #include <iostream>
@@ -41,9 +41,6 @@ int main() {
     PhysicalNumber i1(30, Unit::G);
 
     testcase
-    .setname("Basic output")
-    .CHECK_OUTPUT(a, "2[km]")
-    .CHECK_OUTPUT(b, "300[m]")
     //simple output check
     .setname("Basic output")
     .CHECK_OUTPUT(a, "2[km]")
@@ -192,15 +189,16 @@ int main() {
 
     .setname("\n Basic input")
     .CHECK_OK(istringstream("700[kg]") >> q)
+    .CHECK_OUTPUT(q, "700[kg]")
     .CHECK_OUTPUT((q += PhysicalNumber(1, Unit::TON)), "1700[kg]")
     .CHECK_THROWS(istringstream("seven[kg]") >> q)
 
     .CHECK_OK(istringstream("1[min]") >> e1)
-    .CHECK_THROWS(istringstream("4[kg]") >> e1)//naor
+    .CHECK_OUTPUT(e1, "1[min]")
     .CHECK_THROWS(istringstream("4[kaubanga]") >> e1)
 
     .CHECK_OK(istringstream("1[m]") >> b)
-    .CHECK_THROWS(istringstream("4[min]") >> b)//naor
+    .CHECK_OUTPUT(e1, "1[m]")
     .CHECK_THROWS(istringstream("4[garusis]") >> b)
 
       .setname("...")
